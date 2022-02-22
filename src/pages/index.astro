@@ -1,13 +1,28 @@
 ---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HomeHeroSection from "../components/HomeHeroSection/HomeHeroSection.astro";
+import HomeAboutSection from "../components/HomeAboutSection/HomeAboutSection.astro";
+import HomeAmenitiesSection from "../components/HomeAmenitiesSection/HomeAmenitiesSection.astro";
 
 ---
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+
+<BaseLayout title="Strive Fitness">
+	
+
+	<HomeHeroSection />
+
+	<HomeAboutSection />
+
+	<HomeAmenitiesSection />
+
+	<h2>Get your 3 day pass</h2>
+
+	<p>Take a free 30-minute tour of either of our locations to help you decide if Strive is the right gym for you. You’ll have the opportunity to try equipment, observe classes, and get direct answers to all of your questions.</p>
+
+	<h2>Locations</h2>
+	<ul>
+		<li><a href="/marrickville">Marrickville</a></li>
+		<li><a href="/parramatta">Parramatta</a></li>
+		<li><a href="/marsden-park">Marsden Park</a></li>
+	</ul>
+</BaseLayout>

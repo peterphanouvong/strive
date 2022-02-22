@@ -1,0 +1,49 @@
+---
+import HeroTitle from "../HeroTitle/HeroTitle.astro";
+import Spacing from "../Spacing/Spacing.astro";
+import SiteContainer from "../SiteContainer/SiteContainer.astro";
+import ColorScheme from "../ColorScheme/ColorScheme.astro";
+
+import BoxingImage from "./assets/boxing.jpeg"
+---
+<style>
+  .c-home-about-section__image-wrapper {
+    text-align: center;
+  }
+
+  .c-home-about-section__image {
+    width: 100%;
+  }
+
+  @media only screen and (min-width: 60em) {
+    .c-home-about-section {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr;
+      gap: var(--g-spacing-large);
+      align-items: flex-start;
+    }
+
+    .c-home-about-section p {
+      margin-top: var(--g-spacing-small);
+    }
+
+    .c-home-about-section__image {
+      max-width: 40em;
+    }
+  }
+</style>
+<ColorScheme theme="dark">
+  <SiteContainer paddingY="6x-large">
+    <div class="c-home-about-section">
+      <Spacing size="large">
+        <HeroTitle>Australia's first smart gym</HeroTitle>
+      </Spacing>
+      <p>Strive Fitness is a gym where you come as you are, and do your best. Our membership offers both digital and in-club programming aimed at helping you achieve your fitness goals. Discover all of our club’s offerings below. </p>
+    </div>
+  </SiteContainer>
+  <SiteContainer>
+  <div class="c-home-about-section__image-wrapper">
+    <img class="c-home-about-section__image" src={BoxingImage} alt="Boxing" />
+  </div>
+  </SiteContainer>
+</ColorScheme>

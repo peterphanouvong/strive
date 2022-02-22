@@ -1,0 +1,47 @@
+---
+import cx from "clsx";
+const {size} = Astro.props;
+---
+<style>
+.c-spacing {
+  margin-bottom: var(--g-spacing);
+}
+
+.c-spacing-large {
+  margin-bottom: var(--g-spacing-large);
+}
+
+.c-spacing-x-large {
+  margin-bottom: var(--g-spacing-x-large);
+}
+
+.c-spacing-2x-large {
+  margin-bottom: var(--g-spacing-2x-large);
+}
+
+.c-spacing-3x-large {
+  margin-bottom: var(--g-spacing-3x-large);
+}
+
+.c-spacing-4x-large {
+  margin-bottom: var(--g-spacing-4x-large);
+}
+
+.c-spacing-5x-large {
+  margin-bottom: var(--g-spacing-5x-large);
+}
+
+.c-spacing-small {
+  margin-bottom: var(--g-spacing-small);
+}
+
+.c-spacing-x-small {
+  margin-bottom: var(--g-spacing-x-small);
+}
+</style>
+
+<div class={cx("c-spacing", {
+  [`c-spacing--${size}`]: size,
+})}>
+  <slot />
+</div>

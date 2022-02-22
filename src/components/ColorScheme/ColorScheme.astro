@@ -1,0 +1,15 @@
+---
+import cx from "clsx";
+const {theme} = Astro.props;
+---
+<style>
+.c-color-scheme--dark {
+  background-color: var(--g-color-black);
+  color: var(--g-color-white);
+}
+</style>
+<div class={cx({
+  'c-color-scheme--dark': theme === 'dark',
+})}>
+  <slot/>
+</div>

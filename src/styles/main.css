@@ -1,0 +1,55 @@
+@import "./reset.css";
+
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&display=swap");
+
+:root {
+  /* Colors */
+  --g-color-white: #f0f8ff;
+  --g-color-black: #080808;
+
+  /* Fonts */
+  --g-font-family-primary: Arial, Helvetica, sans-serif;
+  --g-font-family-secondary: "Oswald", Impact, Haettenschweiler,
+    "Arial Narrow Bold", sans-serif;
+
+  /* Font Sizes */
+  --g-font-size-x-small: 0.5rem;
+  --g-font-size-small: 0.7rem;
+  --g-font-size: 1rem;
+  --g-font-size-large: 1.4rem;
+  --g-font-size-x-large: 2rem;
+  --g-font-size-2x-large: 2.8rem;
+  --g-font-size-3x-large: 4rem;
+  --g-font-size-4x-large: 5.6rem;
+  --g-font-size-5x-large: 8rem;
+
+  /* Spacing */
+  --g-spacing-x-small: 0.25rem; /* 4px */
+  --g-spacing-small: 0.5rem; /* 8px */
+  --g-spacing: 1rem; /* 16px */
+  --g-spacing-large: 1.4rem; /* 32px */
+  --g-spacing-x-large: 2rem; /* 48px */
+  --g-spacing-2x-large: 2.8rem; /* 64px */
+  --g-spacing-3x-large: 4rem; /* 80px */
+  --g-spacing-4x-large: 5.6rem; /* 96px */
+  --g-spacing-5x-large: 8rem; /* 112px */
+  --g-spacing-6x-large: 11rem; /* 128px */
+  --g-spacing-7x-large: 16rem; /* 144px */
+
+  /* Container */
+  --g-container-max-width-x-small: 480px;
+  --g-container-max-width-small: 680px;
+  --g-container-max-width: 1080px;
+  --g-container-max-width-large: 1440px;
+}
+
+body,
+html {
+  font-family: var(--g-font-family-primary);
+  background-color: var(--g-color-white);
+  color: var(--g-color-black);
+}
+
+p {
+  line-height: 1.4;
+}

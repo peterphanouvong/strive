@@ -1,0 +1,92 @@
+---
+import cx from "clsx";
+const {position, paddingY, theme, size} = Astro.props;
+---
+<style>
+.c-site-container {
+  margin: 0 auto;
+  padding: 0 var(--g-spacing-large);
+  max-width: var(--g-container-max-width-small);
+}
+
+.c-site-container--light {
+  background-color: var(--g-color-white);
+  color: var(--g-color-black);
+}
+
+.c-site-container--dark {
+  background-color: var(--g-color-black);
+  color: var(--g-color-white);
+}
+
+.c-site-container--relative {
+  position: relative;
+  width: 100%;
+}
+
+.c-site-container--padding-large { 
+  padding-bottom: var(--g-spacing-large); 
+  padding-top: var(--g-spacing-large);
+}
+
+.c-site-container--padding-x-large { 
+  padding-bottom: var(--g-spacing-x-large); 
+  padding-top: var(--g-spacing-x-large);
+}
+
+.c-site-container--padding-2x-large { 
+  padding-bottom: var(--g-spacing-2x-large); 
+  padding-top: var(--g-spacing-2x-large);
+}
+
+.c-site-container--padding-3x-large { 
+  padding-bottom: var(--g-spacing-3x-large); 
+  padding-top: var(--g-spacing-3x-large);
+}
+
+.c-site-container--padding-4x-large { 
+  padding-bottom: var(--g-spacing-4x-large); 
+  padding-top: var(--g-spacing-4x-large);
+}
+
+.c-site-container--padding-5x-large { 
+  padding-bottom: var(--g-spacing-5x-large); 
+  padding-top: var(--g-spacing-5x-large);
+}
+
+.c-site-container--padding-6x-large { 
+  padding-bottom: var(--g-spacing-6x-large); 
+  padding-top: var(--g-spacing-6x-large);
+}
+
+.c-site-container--padding-7x-large { 
+  padding-bottom: var(--g-spacing-7x-large); 
+  padding-top: var(--g-spacing-7x-large);
+}
+
+
+@media only screen and (min-width: 60em) {
+  .c-site-container {
+    max-width: var(--g-container-max-width);
+  }
+}
+
+@media only screen and (min-width: 80em) {
+  .c-site-container {
+    max-width: var(--g-container-max-width-large);
+  }
+}
+
+.c-site-container--small {
+  max-width: var(--g-container-max-width-small);
+}
+</style>
+
+<div class={cx('c-site-container', {
+  [`c-site-container--${position}`]: position,
+  [`c-site-container--padding-${paddingY}`]: paddingY,
+  [`c-site-container--${theme}`]: theme,
+  [`c-site-container--${size}`]: size,
+})}>
+  <slot />
+</div>

@@ -1,0 +1,29 @@
+---
+import cx from "clsx";
+
+const {text, tag = 'h2', theme} = Astro.props;
+const Tag = tag;
+---
+<style>
+.c-hero-title {
+  font-family: var(--g-font-family-secondary);
+  font-size: var(--g-font-size-2x-large);
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.c-hero-title--light {
+  color: var(--g-color-white);
+}
+
+@media only screen and (min-width: 60rem) {
+  .c-hero-title {
+    font-size: var(--g-font-size-3x-large);
+  }
+}
+</style>
+
+<Tag class={cx("c-hero-title", {
+  [`c-hero-title--${theme}`]: theme
+})}>{text}<slot/></Tag>

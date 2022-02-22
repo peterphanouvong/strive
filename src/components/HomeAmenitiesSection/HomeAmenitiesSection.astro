@@ -1,0 +1,29 @@
+---
+import ColorScheme from "../ColorScheme/ColorScheme.astro";
+import SiteContainer from "../SiteContainer/SiteContainer.astro";
+import Title from "../Title/Title.astro";
+import Spacing from "../Spacing/Spacing.astro";
+---
+<style>
+.c-home-amenities-section {
+  text-align: center;
+}
+</style>
+
+<ColorScheme theme="dark">
+<SiteContainer size="small" paddingY="6x-large">
+  <div class="c-home-amenities-section">
+    <Spacing size="large">
+      <Title tag="h2">Amenities</Title>
+    </Spacing>
+    <p>At Strive Fitness, we’re always expanding our amenities to meet the needs of our community. Something you’d like to see added to our list? Submit a request.</p>
+    <ul>
+      <li>Sauna</li>
+      <li>Hot/Cold spa</li>
+      <li>Modern Facilities</li>
+      <li>Premium Classes</li>
+      <li>Personal Trainers</li>
+    </ul>
+  </div>
+</SiteContainer>
+</ColorScheme>

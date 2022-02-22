@@ -1,0 +1,41 @@
+---
+import HomeHeroImageRef from "./assets/home-hero-image.jpeg"
+import DisplayTitle from "../DisplayTitle/DisplayTitle.astro"
+import HeroTitle from "../HeroTitle/HeroTitle.astro"
+import SiteContainer from "../SiteContainer/SiteContainer.astro"
+---
+<style>
+.c-home-hero-section {
+  height: 100vh;
+  display: flex;
+  position: relative;
+}
+
+.c-home-hero-secion__image {
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  z-index: 0;
+}
+
+.c-home-hero-section__content {
+  position: absolute;
+  bottom: 10%;
+}
+
+</style>
+
+<div class="c-home-hero-section">
+  <img class="c-home-hero-secion__image" src={HomeHeroImageRef} alt="Gym treadmills in cool lighting"/>
+  <SiteContainer position="relative">
+    <div class="c-home-hero-section__content">
+      <DisplayTitle theme="light">
+        Train hard.
+        <br>
+        train smart.
+      </DisplayTitle>
+    </div> 
+  </SiteContainer>
+</div>
